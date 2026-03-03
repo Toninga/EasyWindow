@@ -2,7 +2,7 @@
   "name": "com.tonindf.UIToolkit_Template",
   "version": "0.0.1",
   "displayName": "UI Toolkit Template",
-  "description": "A simple template to get jumpstart your game with UI Toolkit",
+  "description": "A simple template to jumpstart your game with UI Toolkit",
   "unity": "6000.2",
 
   "author": {

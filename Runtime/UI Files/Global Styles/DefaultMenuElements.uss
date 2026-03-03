@@ -1,0 +1,17 @@
+:root {
+}
+
+.BigTitle {
+    font-size: 200px;
+    -unity-font-style: bold;
+    -unity-text-outline-width: 4px;
+    -unity-text-outline-color: rgb(255, 255, 255);
+    -unity-text-align: upper-center;
+}
+
+.DefaultButton {
+    min-width: 20%;
+    min-height: 5%;
+    -unity-font-style: bold;
+    font-size: 35px;
+}
