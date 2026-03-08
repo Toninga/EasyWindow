@@ -1,5 +1,6 @@
 VisualElement {
     background-color: rgb(56, 56, 56);
+    -unity-font-definition: url("project://database/Assets/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&guid=e3265ab4bf004d28a9537516768c1c75&type=3#LiberationSans");
 }
 
 section {
@@ -44,7 +45,7 @@ section {
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
-    background-image: url("project://database/Assets/01%20Projets/EasyWindow/EasyWindow/Editor/Themes/Sakura/EasyWindow_Sakura_ButtonDefault.png?fileID=2800000&guid=f998f20defa8c904baf14e161909582e&type=3#EasyWindow_Sakura_ButtonDefault");
+    background-image: url("project://database/Assets/01%20Projets/EasyWindow/Editor/Themes/Sakura/EasyWindow_Sakura_ButtonDefault.png?fileID=2800000&guid=f998f20defa8c904baf14e161909582e&type=3#EasyWindow_Sakura_ButtonDefault");
 }
 
 .menuButton:hover {
@@ -55,7 +56,7 @@ section {
 .menuButton:focus {
     background-color: rgb(130, 66, 66);
     -unity-background-image-tint-color: rgb(255, 255, 255);
-    background-image: url("project://database/Assets/01%20Projets/EasyWindow/EasyWindow/Editor/Themes/Sakura/EasyWindow_Sakura_ButtonSelected.png?fileID=2800000&guid=7e02fea7bb660004cb5d932523a1dbbd&type=3#EasyWindow_Sakura_ButtonSelected");
+    background-image: url("project://database/Assets/01%20Projets/EasyWindow/Editor/Themes/Sakura/EasyWindow_Sakura_ButtonSelected.png?fileID=2800000&guid=7e02fea7bb660004cb5d932523a1dbbd&type=3#EasyWindow_Sakura_ButtonSelected");
 }
 
 .menuButtonLabel {
@@ -85,7 +86,7 @@ section {
     margin-top: 10px;
     -unity-text-outline-width: 0;
     -unity-text-outline-color: rgb(0, 0, 0);
-    -unity-font-definition: url("project://database/Assets/01%20Projets/EasyWindow/EasyWindow/Editor/Themes/Sakura/sakura/Sakura.ttf?fileID=12800000&guid=9f78eff5d994dd74b8e8d11634611cf0&type=3#Sakura");
+    -unity-font-definition: url("project://database/Assets/01%20Projets/EasyWindow/Editor/Themes/Sakura/sakura/Sakura.ttf?fileID=12800000&guid=9f78eff5d994dd74b8e8d11634611cf0&type=3#Sakura");
 }
 
 .subtitle {
@@ -99,7 +100,7 @@ section {
     padding-top: 10px;
     margin-bottom: 5px;
     padding-bottom: 10px;
-    -unity-font-definition: url("project://database/Assets/01%20Projets/EasyWindow/EasyWindow/Editor/Themes/Sakura/sakura-font/SakuraRegular-WyljV.otf?fileID=12800000&guid=00fc23ddc3ee5a245b4d0ca07586736e&type=3#SakuraRegular-WyljV");
+    -unity-font-definition: url("project://database/Assets/01%20Projets/EasyWindow/Editor/Themes/Sakura/sakura-font/SakuraRegular-WyljV.otf?fileID=12800000&guid=00fc23ddc3ee5a245b4d0ca07586736e&type=3#SakuraRegular-WyljV");
 }
 
 .section {
@@ -112,7 +113,7 @@ section {
     border-top-color: rgb(25, 25, 25);
     border-bottom-color: rgb(25, 25, 25);
     background-color: rgb(255, 196, 200);
-    background-image: url("project://database/Assets/01%20Projets/EasyWindow/EasyWindow/Editor/Themes/Sakura/EasyWindow_Sakura_BackgroundLarge.png?fileID=2800000&guid=38edb5ecc34090945a3022b45b257c49&type=3#EasyWindow_Sakura_BackgroundLarge");
+    background-image: url("project://database/Assets/01%20Projets/EasyWindow/Editor/Themes/Sakura/EasyWindow_Sakura_BackgroundLarge.png?fileID=2800000&guid=38edb5ecc34090945a3022b45b257c49&type=3#EasyWindow_Sakura_BackgroundLarge");
     -unity-background-scale-mode: scale-and-crop;
     -unity-background-image-tint-color: rgba(255, 255, 255, 0.2);
 }
