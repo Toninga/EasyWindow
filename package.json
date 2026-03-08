@@ -1,5 +1,5 @@
 {
-  "name": "com.tonindf.EasyWindow",
+  "name": "com.tonindf.easywindow",
   "version": "0.0.1",
   "displayName": "Easy Window",
   "description": "A simple template to show your ScriptableObjects throught editor windows",
