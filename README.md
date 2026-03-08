@@ -24,7 +24,7 @@ Open your package manager and select "Install from git URL", then paste the Foll
 [https://github.com/Toninga/UIToolkit\\\_Template.git](https://github.com/Toninga/EasyWindow.git)
 ```
 
-Or simply clone the git repository to your project.
+Or simply download the git repository zip file and extract it into your project.
 
 
 
