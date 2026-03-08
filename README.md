@@ -16,6 +16,7 @@ Open this window and get a look at how Unity-like it feels !
 ## Installation
 
 
+Make sure you have \[Git](https://git-scm.com/install/windows) (not a third party interface) installed on your computer.
 Open your package manager and select "Install from git URL", then paste the Following link :
 
 ```
