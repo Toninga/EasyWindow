@@ -1,0 +1,24 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="Root" style="flex-grow: 1; overflow: visible; height: 1000px; min-height: auto; flex-shrink: 0;">
+        <engine:VisualElement name="MenuBar" class="section" style="height: 20px;" />
+        <engine:VisualElement name="Content" style="flex-grow: 1; height: auto; flex-direction: row;">
+            <engine:VisualElement name="Menus" class="section" style="flex-grow: 0; width: 200px; flex-direction: column; align-self: stretch; align-items: flex-start; justify-content: flex-start; position: relative; top: 0; left: 0; height: auto; flex-shrink: 0; padding-top: 5px;">
+                <engine:Button text="&#10;" name="DefaultMenu" class="menuButton">
+                    <engine:Label text="EasyWindow Settings" name="DefaultMenuLabel" class="menuButtonLabel" />
+                </engine:Button>
+            </engine:VisualElement>
+            <engine:VisualElement name="MenuContent" enabled="true" style="padding-top: 0; flex-grow: 1; display: flex; flex-shrink: 0;">
+                <engine:VisualElement name="DefaultMenuContent" data-source="project://database/Assets/DefaultVolumeProfile.asset?fileID=11400000&amp;guid=ae3b354b327327a41996b2abd53667ef&amp;type=2#DefaultVolumeProfile" class="section" style="flex-grow: 1; height: 100%; flex-shrink: 0;">
+                    <engine:Label text="EasyWindow Settings" name="DefaultMenuContent_Title" class="title" />
+                    <engine:Label text="Subtitle" name="DefaultMenuContent_Subtitle" class="subtitle" />
+                    <engine:Label text="Label" name="DefaultMenuContent_Label" class="label" />
+                    <engine:SliderInt label="SliderInt" value="42" high-value="100" name="DefaultMenuContent_SliderInt" class="label" />
+                    <engine:Slider label="Slider" value="42" high-value="100" data-source="project://database/Assets/01%20Projets/EasyWindow/Editor/CustomWindowContent.asset?fileID=11400000&amp;guid=9b4b91db2b5187f45849397d1d5dd8a7&amp;type=2#CustomWindowContent" data-source-path="TestValue" name="DefaultMenuContent_Slider" class="label" />
+                    <engine:TextField label="Text Field" placeholder-text="filler text" name="DefaultMenuContent_TextField" class="label" />
+                    <engine:Toggle label="Toggle" class="label" />
+                    <engine:EnumField label="Enum" value="Center" type="UnityEngine.TextAlignment, UnityEngine.TextRenderingModule" class="label" />
+                </engine:VisualElement>
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

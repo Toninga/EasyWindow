@@ -1,0 +1,121 @@
+VisualElement {
+    background-color: rgb(56, 56, 56);
+}
+
+section {
+    border-left-color: rgb(25, 25, 25);
+    border-top-color: rgb(25, 25, 25);
+    border-right-color: rgb(25, 25, 25);
+    border-bottom-color: rgb(25, 25, 25);
+    border-left-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+}
+
+.menuButton {
+    flex-shrink: 0;
+    flex-grow: 1;
+    height: 16px;
+    max-height: 16px;
+    color: rgb(168, 168, 168);
+    font-size: 11px;
+    -unity-font-style: bold;
+    min-height: 16px;
+    flex-direction: column;
+    width: 100%;
+    -unity-background-image-tint-color: rgba(55, 55, 55, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    -unity-text-align: middle-left;
+    white-space: nowrap;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    background-color: rgb(56, 56, 56);
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.menuButton:hover {
+    background-color: rgb(71, 71, 71);
+}
+
+.menuButton:focus {
+    background-color: rgb(44, 93, 135);
+}
+
+.menuButtonLabel {
+    color: rgb(168, 168, 168);
+    font-size: 11px;
+    -unity-font-style: bold;
+    margin-left: 10px;
+    padding-left: 5px;
+    -unity-text-align: middle-left;
+    -unity-font-definition: url("project://database/Packages/com.unity.cinemachine/Runtime/Debug/CinemachineRuntimeTheme.tss?fileID=2230732570650464555&guid=df9aec944f4474a04847b6d6375e4138&type=3#NotInter-Regular");
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    border-top-width: 0;
+}
+
+.title {
+    -unity-font-style: bold;
+    font-size: 20px;
+    color: rgb(168, 168, 168);
+    padding-left: 40px;
+    border-top-width: 0;
+    border-top-color: rgb(25, 25, 25);
+    margin-top: 10px;
+}
+
+.subtitle {
+    border-top-width: 1px;
+    border-top-color: rgb(40, 40, 40);
+    color: rgb(168, 168, 168);
+    -unity-font-style: bold;
+    font-size: 16px;
+    padding-left: 20px;
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+
+.section {
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-left-color: rgb(25, 25, 25);
+    border-right-color: rgb(25, 25, 25);
+    border-top-color: rgb(25, 25, 25);
+    border-bottom-color: rgb(25, 25, 25);
+}
+
+.label {
+    color: rgb(168, 168, 168);
+    font-size: 11px;
+    -unity-font-style: bold;
+    padding-left: 10px;
+    height: 16px;
+    max-height: 16px;
+    min-height: 16px;
+    -unity-text-align: middle-left;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.field {
+}

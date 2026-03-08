@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182dc432be8ed0f4a8300cfff5f269fc, type: 3}
+  m_Name: Statistics
+  m_EditorClassIdentifier: 
+  DistanceWalked: 1430.6
+  DistanceRan: 5039.8
+  Jumps: 946
+  TimeSneaking: 295.1
+  GamesPlayed: 37
+  FriendRequestsSent: 12
+  FriendRequestsReceived: 3
+  TimePlayed: 1105.93
+  GamesWon: 27
+  GamesLost: 10
+  MostValuableFriend: JackyJacky
+  FavoriteCharacter: Bangalore
