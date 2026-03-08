@@ -17,6 +17,7 @@ Open this window and get a look at how Unity-like it feels !
 
 
 Make sure you have [Git](https://git-scm.com/install/windows) (not a third party interface) installed on your computer.
+You might have to restart your computer after installing Git to update your system variables
 Open your package manager and select "Install from git URL", then paste the Following link :
 
 ```
