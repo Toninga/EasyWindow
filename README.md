@@ -1,14 +1,14 @@
-\# EasyWindow
+# EasyWindow
 
 
 
-\## Description
+## Description
 
 Modify your ScriptableObjects with custom Windows providing an authentic Unity-feel.
 
 
 
-\## Sample
+## Sample
 
 Window > Easy Window Sample
 Open this window and get a look at how Unity-like it feels !
@@ -26,7 +26,7 @@ Or simply clone the git repository to your project.
 
 
 
-\## Usage
+## Usage
 
 You can make your new custom window by following these steps :
 
