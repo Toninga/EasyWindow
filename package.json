@@ -1,9 +1,9 @@
 {
-  "name": "com.tonindf.UIToolkit_Template",
+  "name": "com.tonindf.EasyWindow",
   "version": "0.0.1",
-  "displayName": "UI Toolkit Template",
-  "description": "A simple template to jumpstart your game with UI Toolkit",
-  "unity": "6000.2",
+  "displayName": "Easy Window",
+  "description": "A simple template to show your ScriptableObjects throught editor windows",
+  "unity": "6000.0",
 
   "author": {
     "name": "Antonin Delpias--Faucher"
