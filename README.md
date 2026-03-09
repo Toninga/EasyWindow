@@ -32,7 +32,7 @@ Or simply download the git repository zip file and extract it into your project.
 
 You can make your new custom window by following these steps :
 
-* Create a new script in an editor folder
+* Create a new script **in an editor folder**
 * Paste the following code inside your script
 
 ```
@@ -41,7 +41,7 @@ using UnityEditor;
 public class YOURCLASSNAME : EasyWindow
 {
 	new public const string DefaultWindowName = "YOUR WINDOW NAME";
-	\[MenuItem("Window/YOUR WINDOW MENU ITEM")]
+	[MenuItem("Window/YOUR WINDOW MENU ITEM")]
 	public static void NewWindow()
 	{
 		MakeWindow<YOURCLASSNAME>();
