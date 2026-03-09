@@ -26,7 +26,7 @@ https://github.com/Toninga/EasyWindow.git
 
 Or simply download the git repository zip file and extract it into your project.
 
-
+**Please install the samples as well**
 
 ## Usage
 
