@@ -21,7 +21,7 @@ You might have to restart your computer after installing Git to update your syst
 Open your package manager and select "Install from git URL", then paste the Following link :
 
 ```
-[https://github.com/Toninga/UIToolkit\\\_Template.git](https://github.com/Toninga/EasyWindow.git)
+https://github.com/Toninga/EasyWindow.git
 ```
 
 Or simply download the git repository zip file and extract it into your project.
