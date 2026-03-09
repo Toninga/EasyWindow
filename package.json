@@ -13,6 +13,11 @@
       "displayName": "Default UI and styles",
       "description": "Downloading the samples is highly recommended, as it contains useful editor files for you to use",
       "path": "Samples\\DefaultSample"
+    },
+    {
+      "displayName": "Files",
+      "description": "Downloading the sample files is highly recommended, as it contains useful editor files for you to use",
+      "path": "Samples~/Files"
     }
   ]
 }
