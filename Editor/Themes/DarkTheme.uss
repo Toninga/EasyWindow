@@ -1,6 +1,6 @@
 VisualElement {
     background-color: rgb(56, 56, 56);
-    -unity-font-definition: url("project://database/Library/unity%20default%20resources?fileID=10102&guid=0000000000000000e000000000000000&type=0#LegacyRuntime");
+    -unity-font-definition: resource('Shared/EasyWindow_LiberationSans');
 }
 
 section {
@@ -62,7 +62,6 @@ section {
     margin-left: 10px;
     padding-left: 5px;
     -unity-text-align: middle-left;
-    -unity-font-definition: url("project://database/Packages/com.unity.cinemachine/Runtime/Debug/CinemachineRuntimeTheme.tss?fileID=2230732570650464555&guid=df9aec944f4474a04847b6d6375e4138&type=3#NotInter-Regular");
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 0;

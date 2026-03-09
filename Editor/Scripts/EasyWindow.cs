@@ -94,6 +94,11 @@ public class EasyWindow : EditorWindow
             VisualElement root = visualTree.CloneTree();
             rootVisualElement.Add(root);
 
+            VisualElement menuButtonGroup = rootVisualElement.Q(MenuButtonGroup);
+            if (menuButtonGroup != null) menuButtonGroup.Clear();
+            VisualElement menuContentGroup = rootVisualElement.Q(MenuContentGroup);
+            if (menuContentGroup != null) menuContentGroup.Clear();
+
             // Add the selected style sheet
             if (styleSheet != null)
             {
@@ -104,12 +109,14 @@ public class EasyWindow : EditorWindow
             // Setup the default menu
             SetupDefaultMenu();
             if (HideDefaultMenu) TryHideMenu(DefaultWindowName);
+            else EnableMenu(DefaultWindowName);
 
             if (Profile != null)
             {
                 // Add the menus based on scriptable objects
                 foreach (var target in MenuTargets)
                 {
+                    Debug.Log("AAAHHHHHHH");
                     AddMenu(target.name, target);
                 }
             }
@@ -118,9 +125,12 @@ public class EasyWindow : EditorWindow
     }
     private void SetupDefaultMenu()
     {
-        var button = rootVisualElement.Q<Button>(DefaultMenuButton);
+        Button button;
+        TryMakeMenuButton(DefaultWindowName, out button);
         button.clicked += () => EnableMenu(DefaultWindowName);
-        var content = rootVisualElement.Q<VisualElement>(DefaultMenuContent);
+
+        VisualElement content;
+        TryMakeMenuContent(DefaultWindowName,out content);
         content.Clear();
 
         content.Add(MakeTitle(GetDefaultWindowName(this)));
@@ -128,25 +138,23 @@ public class EasyWindow : EditorWindow
         content.Add(MakeObjectField("Menu profile", SetProfile, typeof(EasyWindowProfile), Profile));
         content.Add(Space());
 
-        content.Add(MakeLabel("Currently added menus : "));
-        foreach (var target in MenuTargets)
+        if (MenuTargets.Count > 0)
         {
-            var temp = MakeObjectField(target.name, UnregisterMenu, typeof(ScriptableObject), target);
-            content.Add(temp);
+            content.Add(MakeLabel("Currently added menus : "));
+            foreach (var target in MenuTargets)
+            {
+                var temp = MakeObjectField(target.name, UnregisterMenu, typeof(ScriptableObject), target);
+                content.Add(temp);
+            }
         }
+        else
+            content.Add(MakeLabel("No menus added for now"));
 
         // Allow adding a new menu
         content.Add(Space());
         var objField = MakeObjectField("Select and add a new menu", RegisterMenu, typeof(ScriptableObject));
         content.Add(objField);
 
-        if (button != null && content != null)
-        {
-            if (!_tabs.ContainsKey(DefaultWindowName))
-                _tabs.Add(DefaultWindowName, (button, content));
-            else
-                _tabs[DefaultWindowName] = (button, content);
-        }
 
         content.Add(Space());
         content.Add(MakeSubtitle("How to use"));
@@ -162,6 +170,8 @@ public class EasyWindow : EditorWindow
         content.Add(MakeLabel("<color=white>How to make my own window ?</color>"));
         content.Add(MakeLabel("Have a look at the samples. You can inherit from EasyWindow, and use EasyWindow's visual tree and stylesheet."));
         content.Add(MakeLabel("Simply assign them in your mono script's default fields (in the inspector, after selecting you custom window script)"));
+
+        AddMenu(DefaultWindowName, content, button, 0);
     }
     public void RegisterMenu(ChangeEvent<Object> evt)
     {
@@ -172,7 +182,6 @@ public class EasyWindow : EditorWindow
             MenuTargets.Add(obj);
             AddMenu(obj.name, obj);
             SetupDefaultMenu();
-            rootVisualElement.MarkDirtyRepaint();
         }
     }
 
@@ -180,12 +189,20 @@ public class EasyWindow : EditorWindow
     {
         if (evt.currentTarget is ObjectField elm && evt.previousValue is ScriptableObject obj && evt.newValue == null)
         {
-            Debug.Log("3");
             elm.value = null;
             MenuTargets.Remove(obj);
             RemoveMenu(obj.name);
             SetupDefaultMenu();
-            rootVisualElement.MarkDirtyRepaint();
+        }
+        else if (evt.currentTarget is ObjectField elm1 && evt.previousValue is ScriptableObject obj1 && evt.newValue is ScriptableObject obj2)
+        {
+            elm1.value = obj2;
+            int index = MenuTargets.IndexOf(obj1);
+            MenuTargets.Remove(obj1);
+            MenuTargets.Insert(index, obj2);
+            RemoveMenu(obj1.name);
+            AddMenu(obj2.name, obj2, index+1);
+            SetupDefaultMenu();
         }
     }
     public void SetProfile(ChangeEvent<Object> evt)
@@ -237,7 +254,7 @@ public class EasyWindow : EditorWindow
             _tabs.Remove(menuName);
         }
     }
-    public void AddMenu(string menuName, ScriptableObject linkedObject = null)
+    public void AddMenu(string menuName, ScriptableObject linkedObject = null, int index=-1)
     {
         // Generate the menu's content
         VisualElement content;
@@ -250,22 +267,42 @@ public class EasyWindow : EditorWindow
             if (!TryMakeMenuContent(menuName, linkedObject, out content)) return;
         }
         content.style.display = DisplayStyle.None;
-
         // Generate the menu's button
         if (!TryMakeMenuButton(menuName, out var button)) return;
         button.clicked += () => EnableMenu(menuName);
+        AddMenu(menuName, content, button, index);
 
+    }
+
+    private void AddMenu(string menuName, VisualElement content, Button button, int index=-1)
+    {
         // Get the roots on which to add the menu
         VisualElement menuButtonGroup = rootVisualElement.Q(MenuButtonGroup);
         if (menuButtonGroup == null) return;
         VisualElement menuContentGroup = rootVisualElement.Q(MenuContentGroup);
         if (menuContentGroup == null) return;
 
+        if (_tabs.ContainsKey(menuName))
+        {
+            menuButtonGroup.Remove(_tabs[menuName].button);
+            menuContentGroup.Remove(_tabs[menuName].content);
+            _tabs.Remove(menuName);
+        }
         // Add the menu to the UI
-        menuButtonGroup.Add(button);
-        menuContentGroup.Add(content);
+        if (index == -1)
+        {
+            menuButtonGroup.Add(button);
+            menuContentGroup.Add(content);
+        }
+        else
+        {
+            menuButtonGroup.Insert(index, button);
+            menuContentGroup.Insert(index, content);
+        }
+
         _tabs.Add(menuName, (button, content));
     }
+
     protected void EnableMenu(string menuName)
     {
         if (!TryGetContent(menuName, out var content)) return;
@@ -286,17 +323,13 @@ public class EasyWindow : EditorWindow
     protected bool TryMakeMenuButton(string menuName, out Button result)
     {
         result = null;
-        Button referenceMenuButton = rootVisualElement.Q<Button>(DefaultMenuButton);
-        if (referenceMenuButton == null) return false;
-
-        Label referenceMenuLabel = rootVisualElement.Q<Label>(DefaultMenuButtonLabel);
-        if (referenceMenuButton == null) return false;
 
         Button newButton = new Button();
-        ReplicateStyle(newButton, referenceMenuButton);
+        newButton.name = menuName;
+        newButton.AddToClassList(MenuButton);
 
         Label newLabel = new Label();
-        ReplicateStyle(newLabel, referenceMenuLabel);
+        newLabel.AddToClassList(MenuButtonLabel);
 
         newLabel.text = menuName;
         newButton.Add(newLabel);
@@ -308,6 +341,7 @@ public class EasyWindow : EditorWindow
     protected bool TryMakeMenuContent(string menuName, out VisualElement result)
     {
         result = new();
+        result.name = menuName;
         result.AddToClassList(Section);
         result.style.flexGrow = 1;
 

@@ -12,11 +12,7 @@
                     <engine:Label text="EasyWindow Settings" name="DefaultMenuContent_Title" class="title" />
                     <engine:Label text="Subtitle" name="DefaultMenuContent_Subtitle" class="subtitle" />
                     <engine:Label text="Label" name="DefaultMenuContent_Label" class="label" />
-                    <engine:SliderInt label="SliderInt" value="42" high-value="100" name="DefaultMenuContent_SliderInt" class="label" />
-                    <engine:Slider label="Slider" value="42" high-value="100" data-source="project://database/Assets/01%20Projets/EasyWindow/Editor/CustomWindowContent.asset?fileID=11400000&amp;guid=9b4b91db2b5187f45849397d1d5dd8a7&amp;type=2#CustomWindowContent" data-source-path="TestValue" name="DefaultMenuContent_Slider" class="label" />
                     <engine:TextField label="Text Field" placeholder-text="filler text" name="DefaultMenuContent_TextField" class="label" />
-                    <engine:Toggle label="Toggle" class="label" />
-                    <engine:EnumField label="Enum" value="Center" type="UnityEngine.TextAlignment, UnityEngine.TextRenderingModule" class="label" />
                 </engine:VisualElement>
             </engine:VisualElement>
         </engine:VisualElement>
