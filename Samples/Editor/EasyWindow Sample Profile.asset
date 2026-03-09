@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EasyWindow Sample Profile
   m_EditorClassIdentifier: 
   MenuTargets:
-  - {fileID: 11400000, guid: d60dfa5739c904e49971cd42529067f5, type: 2}
+  - {fileID: 11400000, guid: 03f046d8943ebd9438d2785faa61b4cc, type: 2}
   - {fileID: 11400000, guid: d60dfa5739c904e49971cd42529067f5, type: 2}
