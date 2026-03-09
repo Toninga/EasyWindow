@@ -7,6 +7,13 @@
 
   "author": {
     "name": "Antonin Delpias--Faucher"
-  }
+  },
+  "samples": [
+    {
+      "displayName": "Default UI and styles",
+      "description": "Downloading the samples is highly recommended, as it contains useful editor files for you to use",
+      "path": "Samples"
+    }
+  ]
 }
 
