@@ -24,9 +24,7 @@ Open your package manager and select "Install from git URL", then paste the Foll
 https://github.com/Toninga/EasyWindow.git
 ```
 
-Or simply download the git repository zip file and extract it into your project.
-
-**Please install the samples as well**
+If you want to make your own windows, it is advised to download the git repository zip file and extract it into your project.
 
 ## Usage
 

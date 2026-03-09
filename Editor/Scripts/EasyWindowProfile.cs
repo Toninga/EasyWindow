@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "CustomWindowProfile", menuName = "Scriptable Objects/CustomWindowProfile")]
+[CreateAssetMenu(fileName = "EasyWindowProfile", menuName = "Scriptable Objects/Easy Window Profile")]
 public class EasyWindowProfile : ScriptableObject
 {
     public List<ScriptableObject> MenuTargets = new();
