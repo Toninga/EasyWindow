@@ -8,7 +8,7 @@
                 </engine:Button>
             </engine:VisualElement>
             <engine:VisualElement name="MenuContent" enabled="true" style="padding-top: 0; flex-grow: 1; display: flex; flex-shrink: 0;">
-                <engine:VisualElement name="DefaultMenuContent" data-source="project://database/Assets/DefaultVolumeProfile.asset?fileID=11400000&amp;guid=ae3b354b327327a41996b2abd53667ef&amp;type=2#DefaultVolumeProfile" class="section" style="flex-grow: 1; height: 100%; flex-shrink: 0;">
+                <engine:VisualElement name="DefaultMenuContent" class="section" style="flex-grow: 1; height: 100%; flex-shrink: 0;">
                     <engine:Label text="EasyWindow Settings" name="DefaultMenuContent_Title" class="title" />
                     <engine:Label text="Subtitle" name="DefaultMenuContent_Subtitle" class="subtitle" />
                     <engine:Label text="Label" name="DefaultMenuContent_Label" class="label" />
